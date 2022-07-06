@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estiloheader.css" />
+    <link rel="stylesheet" href="css/estilopagina.css" />
+    <title>Connie Bella</title>
+    <script type="text/javascript" src="js/checkbox.js"></script>
+    <script type="text/javascript" src="js/validaciones.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="franjablanca">
+            <div class="conticonos">
+                <input type="checkbox" name="" id="check2" onchange="mostrarPerfil();">
+                <div class="conticon">
+                    <div class="profile-icon"></div>
+                </div>
+            </div>
+            <div class="logocont">
+                <h3 class="logo">C<span>onnie</span> B<span>ella</span></h3>
+            </div>
+            <div class="conticonos">
+                <div class="conticon">
+                    <a href="#">
+                        <img src="img/carrito.png" class="icono" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="perfil" id="showperfil">
+                <ul>
+                    <li class="perfilinks">
+                        <a href="iniciosesion.html">Iniciar sesión</a>
+                    </li>
+                    <div class="flecha2"></div>
+                </ul>
+            </div>
+
+            <div class="menu">
+                <div class="opciones">
+                    <ul>
+                        <li class="linkmenu">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="linkmenu">
+                            <a href="platillos.html">Platillos</a>
+                        </li>
+                        <li class="linkmenu">
+                            <a href="#popupsus">Suscribirse</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--Contenedor central-->
+    <div class="contcentral">
+
+        <!--Div de la izquierda-->
+        <div class="izquierda">
+            <h2>FILTROS</h2>
+            <h3>Platillos</h3>
+            <form>
+                <h4>Entradas</h4>
+                <label><input type="checkbox"> Sopas</label>
+                <label><input type="checkbox"> Antipasta</label>
+                <label><input type="checkbox"> Ensalada</label>
+                <label><input type="checkbox"> Caldos</label>
+                <label><input type="checkbox"> Para niños</label>
+
+                <h4>Plato fuerte</h4>
+                <label><input type="checkbox"> Pasta</label>
+                <label><input type="checkbox"> Pizza</label>
+                <label><input type="checkbox"> Albóndigas</label>
+                <label><input type="checkbox"> De la cocina</label>
+                <label><input type="checkbox"> Especiales del día</label>
+                <label><input type="checkbox"> Simones</label>
+                <label><input type="checkbox"> Cortes de carne</label>
+
+                <!-- ordenar por -->
+                <h4>Ordenar por:</h4>
+                <select name="" id="" class="talla">
+                    <option value="">A - Z</option>
+                    <option value="">Z - A</option>
+                    <option value="">Menor precio</option>
+                    <option value="">Mayor precio</option>
+                    <option value="">Más recomendado</option>
+                    <option value="">Más nuevo</option>
+                </select>
+
+                <!--Rango-->
+                <h4>Rango de precio:</h4>
+                <div class="contrango">
+                    <input type="text" class="rango" placeholder="Min" onkeypress="return Solonumero(event);"
+                        onkeyup="mensaje(event);" />
+                    -
+                    <input type="text" class="rango" placeholder="Max" onkeypress="return Solonumero(event);"
+                        onkeyup="mensaje(event);" />
+                </div>
+        </div>
+
+        <!--Div de la derecha-->
+        <div class="derecha">
+            <div class="tituloclas">
+                <h1>Platillos</h1>
+            </div>
+            <main class="main">
+                <section class="cards">
+                    <article class="card">
+                        <picture class="contfoto">
+                            <img src="img/pasta.jpg"
+                                class="imgcard">
+                        </picture>
+                        <div class="card-content">
+                            <h2>Pasta</h2>
+                            <h3>$100</h3>
+                            <form action="" method="POST">
+                                <select name="talla" id="talla" class="talla">
+                                    <option value="L">Jumbo</option>
+                                    <option value="XL">Familiar</option>
+                                    <option value="XS">Para dos</option>
+                                    <option value="S">Para uno</option>
+                                    <option value="M">Infantil</option>
+                                    
+                                </select>
+                                <input type="number" name="cant" id="cant" min=1 class="cant" value="1" />
+                                <input type="submit" name="btnAccion" class="btnagregar" value="Agregar al carrito" />
+                            </form>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <picture class="contfoto">
+                            <img src="img/pizza.jpg"
+                                class="imgcard">
+                        </picture>
+                        <div class="card-content">
+                         <h2>Pizza</h2>
+                            <h3>$200</h3>
+                            <form action="" method="POST">
+                                <select name="talla" id="talla" class="talla">
+                                    <option value="L">Jumbo</option>
+                                    <option value="XL">Familiar</option>
+                                    <option value="XS">Para dos</option>
+                                    <option value="S">Para uno</option>
+                                    <option value="M">Infantil</option>
+                                </select>
+                                <input type="number" name="cant" id="cant" min=1 class="cant" value="1" />
+                                <input type="submit" name="btnAccion" class="btnagregar" value="Agregar al carrito" />
+                            </form>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <picture class="contfoto">
+                            <img src="img/albondigas.jpg"
+                                class="imgcard">
+                        </picture>
+                        <div class="card-content">
+                            <h2>Albondigas</h2>
+                            <h3>$80</h3>
+                            <form action="" method="POST">
+                                <select name="talla" id="talla" class="talla">
+                                    <option value="L">Jumbo</option>
+                                    <option value="XL">Familiar</option>
+                                    <option value="XS">Para dos</option>
+                                    <option value="S">Para uno</option>
+                                    <option value="M">Infantil</option>
+                                </select>
+                                <input type="number" name="cant" id="cant" min=1 class="cant" value="1" />
+                                <input type="submit" name="btnAccion" class="btnagregar" value="Agregar al carrito" />
+                            </form>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <picture class="contfoto">
+                            <img src="img/simone.jpg"
+                                class="imgcard">
+                        </picture>
+                        <div class="card-content">
+                            <h2>Simone</h2>
+                            <h3>$40</h3>
+                            <form action="" method="POST">
+                                <select name="talla" id="talla" class="talla">
+                                    <option value="L">Carne</option>
+                                    <option value="XL">Peperoni</option>
+                                    <option value="XS">Albondigas</option>
+                                    <option value="S">Salchicha</option>
+                                    <option value="M">Champiñones</option>
+                                </select>
+                                <input type="number" name="cant" id="cant" min=1 class="cant" value="1" />
+                                <input type="submit" name="btnAccion" class="btnagregar" value="Agregar al carrito" />
+                            </form>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <picture class="contfoto">
+                            <img src="img/pielimon.jpg"
+                                class="imgcard">
+                        </picture>
+                        <div class="card-content">
+                            <h2>Pie de Limón</h2>
+                            <h3>$80</h3>
+                            <form action="" method="POST">
+                                <select name="talla" id="talla" class="talla">
+                                    <option value="L">Jumbo</option>
+                                    <option value="XL">Familiar</option>
+                                    <option value="XS">Para dos</option>
+                                    <option value="S">Para uno</option>
+                                    <option value="M">Infantil</option>
+                                </select>
+                                <input type="number" name="cant" id="cant" min=1 class="cant" value="1" />
+                                <input type="submit" name="btnAccion" class="btnagregar" value="Agregar al carrito" />
+                            </form>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <picture class="contfoto">
+                            <img src="img/corte.jpg"
+                                class="imgcard">
+                        </picture>
+                        <div class="card-content">
+                             <h2>Corte de carne</h2>
+                            <h3>$400</h3>
+                            <form action="" method="POST">
+                                <select name="talla" id="talla" class="talla">
+                                    <option value="L">Cocido</option>
+                                    <option value="XL">3/4 de cocido</option>
+                                    <option value="XS">Termino medio</option>
+                                    
+                                </select>
+                                <input type="number" name="cant" id="cant" min=1 class="cant" value="1" />
+                                <input type="submit" name="btnAccion" class="btnagregar" value="Agregar al carrito" />
+                            </form>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+    <!--Seccion negra de abajo-->
+<div class="mapa">
+    <div class="seccion2">
+        <div class="linkmap">
+            <a href="index.html" class="link">Inicio</a>
+        </div>
+        <div class="linkmap">
+            <a href="platillos.html" class="link">Platillos</a>
+        </div>
+        <div class="linkmap">
+            <a href="#popupsus" class="link">Suscribirse</a>
+        </div>
+        <div class="linkmap">
+            <a href="iniciosesion.html" class="link">Iniciar sesión</a>
+        </div>
+    </div>
+    <div class="seccion2">
+        <div class="linkmap">
+            <a href="mapasitio.xml" class="link" target="_blank">Mapa de sitio</a>
+        </div>
+        <div class="linkmap">
+            <a href="envios.html" class="link">Política de envíos y devoluciones</a>
+        </div>
+        <div class="linkmap">
+            <a href="aviso.html" class="link">Aviso de privacidad</a>
+        </div>
+        <div class="linkmap">
+            <a href="faq.html" class="link">Preguntas frecuentes</a>
+        </div>
+    </div>
+    <div class="seccion3">
+        <div class="linkmap" id="contacto">
+            Contáctanos
+        </div>
+        <div class="cont">
+            <div class="linkmap2">
+                <img src="img/fb.png" class="icon" />
+                Connie Bella
+            </div>
+            <div class="linkmap2">
+                <img src="img/whats.png" class="icon" />
+                +52 656 7864
+            </div>
+        </div>
+        <div class="cont">
+            <div class="linkmap2">
+                <img src="img/correo.png" class="icon" />
+                connieb@gmail.com
+            </div>
+            <div class="linkmap2">
+                <img src="img/telefono.png" class="icon" />
+                656 234 6532
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--pop up suscribete-->
+<div id="popupsus" class="fondo2">
+    <div class="contclas2">
+        <a href="#" class="link">
+            <div class="cerrar">
+                <img src="img/cruz.png" class="cruz" />
+            </div>
+        </a>
+        <div class="tituloclase2">
+            &iexcl;Regístrate para recibir notificaciones!
+        </div>
+        <div class="contcentral">
+            <div class="textoclase">
+                <p>
+                    <br>
+                    Al registrarte recibirás notificaciones random al correo electrónico sobre contenido exclusivo
+                    de este sitio.
+                </p>
+            </div>
+        </div>
+        <div class="contcentral">
+            <div class="susform">
+                <form action="" method="">
+                    <input type="text" name="txtcor" placeholder="Correo electrónico" class="txtform" id="correosus" />
+                    <input type="text" name="txtnom" placeholder="Nombre" class="txtform" id="nomsus" />
+                    <input type="text" name="txtape" placeholder="Apellido" class="txtform" id="apesus" />
+                    <input type="reset" class="btnreset" value="Limpiar" />
+                    <input type="button" class="btnsubmit" value="Suscribirse" onclick="verificarsus();" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
